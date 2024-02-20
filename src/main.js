@@ -1,12 +1,9 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
-import store from "./store";
+import { loadFonts } from "./plugins/webfontloader";
+import { createPinia } from "pinia";
 
-Vue.config.productionTip = false;
+loadFonts();
 
-new Vue({
-  vuetify,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+createApp(App).use(createPinia()).use(vuetify).mount("#app");

@@ -1,14 +1,13 @@
 <template>
   <v-app>
-
     <v-main>
-     <CurrecyTable/>
+      <CurrecyTable/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import CurrecyTable from './components/CurrecyTable';
+import CurrecyTable from './components/CurrecyTable.vue'
 
 export default {
   name: 'App',
@@ -20,5 +19,5 @@ export default {
   data: () => ({
     //
   }),
-};
+}
 </script>
